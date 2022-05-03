@@ -1,0 +1,2 @@
+# flutter_tutorial_app
+勉強会用のFlutterアプリリポジトリ
