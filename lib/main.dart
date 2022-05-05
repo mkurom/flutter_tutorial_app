@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:tutorial_app/views/pages/statefull_widget_page/countup_statefull.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -39,8 +41,23 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: const Center(
-        child: Text('Hello Flutter'),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CountupPageWithStateful(),
+                  ),
+                );
+              },
+              child: const Text('StatefulWidget'),
+            ),
+          ],
+        ),
       ),
     );
   }
